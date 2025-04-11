@@ -1,0 +1,80 @@
+CREATE TABLE IF NOT EXISTS incidence_rate (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    `group` TEXT,
+    `code` TEXT,
+    `name` TEXT,
+    `year` YEAR,
+    `disease` TEXT,
+    `disease_description` TEXT,
+    `denominator` TEXT,
+    `incidence_rate` DOUBLE
+);
+
+CREATE TABLE IF NOT EXISTS coverage (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    `group` TEXT,
+    `code` TEXT,
+    `name` TEXT,
+    `year` YEAR,
+    `antigen` TEXT,
+    `antigen_description` TEXT,
+    `coverage_category` TEXT,
+    `coverage_category_description` TEXT,
+    `target_number` bigint,
+    `doses` bigint,
+    `coverage` DOUBLE
+);
+
+
+CREATE TABLE IF NOT EXISTS reported_case (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    `group` TEXT,
+    `code` TEXT,
+    `name` TEXT,
+    `year` YEAR,
+    `disease` TEXT,
+    `disease_description` TEXT,
+    `cases` DOUBLE
+);
+
+CREATE TABLE IF NOT EXISTS vaccine_introduction (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    `iso_3_code` TEXT,
+    `countryname` TEXT,
+    `who_region` TEXT,
+    `year` YEAR,
+    `description` TEXT,
+    `intro` TEXT
+);
+
+CREATE TABLE IF NOT EXISTS vaccine_schedule (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    `iso_3_code` TEXT,
+    `countryname` TEXT,
+    `who_region` TEXT,
+    `year` YEAR,
+    `vaccinecode` TEXT,
+    `vaccine_description` TEXT,
+    `schedulerounds` INT,
+    `targetpop` TEXT,
+    `targetpop_description` TEXT,
+    `geoarea` TEXT,
+    `ageadministered` TEXT,
+    `sourcecomment` TEXT
+    );
+
+    CREATE TABLE IF NOT EXISTS vaccine_schedule (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    `iso_3_code` TEXT,
+    `countryname` TEXT,
+    `who_region` TEXT,
+    `year` YEAR,
+    `vaccinecode` TEXT,
+    `vaccine_description` TEXT,
+    `schedulerounds` INT,
+    `targetpop` TEXT,
+    `targetpop_description` TEXT,
+    `geoarea` TEXT,
+    `ageadministered` TEXT,
+    `sourcecomment` TEXT
+    );
